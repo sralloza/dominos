@@ -42,7 +42,7 @@ def find_closest_shop(province_id, city_id, street_name, street_number):
     response = downloader.post(url, data=payload)
     if response.headers["content-type"].split(";")[0] == "application/json":
         if response.json()["result"] is False:
-            raise RuntimeError()
+            raise RuntimeError(payload, response.json())
 
     soup = BeautifulSoup(response.text, "html.parser")
     shop = soup.find("ul", class_="listTiendas").find("li")
