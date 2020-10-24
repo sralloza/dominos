@@ -1,3 +1,4 @@
+from dominos.schemas import Coords, OrderType, Shop
 from enum import Enum
 import json
 from collections import namedtuple
@@ -9,19 +10,6 @@ from dominos.networking import downloader
 from dominos.utils import BASE_URL
 
 json_path = Path(__file__).with_name("provinces-cities-ids.json")
-Shop = namedtuple("Shop", "id title phone schedule types coords")
-Coords = namedtuple("Coords", "lat long")
-
-
-class OrderType(Enum):
-    pick_up = "recoger"
-    delivery = "domicilio"
-
-    def __str__(self):
-        return f"<{self.name}>"
-
-    def __repr__(self) -> str:
-        return str(self)
 
 
 def remove_accents(string):
@@ -68,9 +56,6 @@ def find_closest_shop(province_id, city_id, street_name, street_number):
         if response.json()["result"] is False:
             raise RuntimeError()
 
-    # Path("a.html").write_bytes(response.content)
-    # click.launch("a.html")
-
     soup = BeautifulSoup(response.text, "html.parser")
     shop = soup.find("ul", class_="listTiendas").find("li")
 
@@ -87,8 +72,15 @@ def build_shop_from_soup(soup: BeautifulSoup):
     schedule = paragraphs[1].text[9:]
     types = [OrderType(x["name"]) for x in soup.find_all("button")]
 
-    coords = Coords(float(soup["data-latitude"]), float(soup["data-longitude"]))
-    return Shop(shop_id, title, phone, schedule, types, coords)
+    coords = Coords(lat=float(soup["data-latitude"]), long=float(soup["data-longitude"]))
+    return Shop(
+        id=shop_id,
+        title=title,
+        phone=phone,
+        schedule=schedule,
+        types=types,
+        coords=coords,
+    )
 
 
 def get_provinces():

@@ -4,15 +4,12 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from dominos.codes import get_codes
-from dominos.locations import Shop
+from dominos.schemas import AppliedPromotion, WorkingCode
 
-from .locations import OrderType, get_shop_by_address
+from .codes import get_codes
+from .locations import OrderType, Shop, get_shop_by_address
 from .networking import Downloader
 from .utils import BASE_URL
-
-WorkingCode = namedtuple("WorkingCode", "code order_type description expires")
-AppliedPromotion = namedtuple("AppliedPromotion", "order_type description expires")
 
 
 class Dominos:
@@ -55,15 +52,17 @@ class Dominos:
         promotions_container = soup.find_all("li", class_="code--promotion")
 
         for promotion in promotions_container:
-            primary = promotion["data-name"]
+            description = promotion["data-name"]
             expires = (
                 promotion.find("small", class_="small").text.split()[-1].strip(".")
             )
-            promotion = AppliedPromotion(self.order_type, primary, expires)
+            promotion = AppliedPromotion(
+                order_type=self.order_type, description=description, expires=expires
+            )
 
             if promotion not in self.applied_promotions:
                 self.applied_promotions.append(promotion)
-                return WorkingCode(code, self.order_type, primary, expires)
+                return WorkingCode(code=code, **promotion.dict())
 
     def check_all_codes(self):
         codes = get_codes()
