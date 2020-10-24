@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import List, Optional
 from urllib.parse import urljoin
 
@@ -76,3 +77,27 @@ class Dominos:
             code = self.check_code(code)
             if code:
                 yield code
+
+
+def update_codes(addresses: List[Address], base_folder=""):
+    if base_folder:
+        base_folder = Path(base_folder).absolute()
+    else:
+        base_folder = Path(__file__).parent.parent
+
+    base_folder.mkdir(exist_ok=True, parents=True)
+
+    for address in addresses:
+        dominos = Dominos()
+        dominos.select_shop(**address.dict())
+        file_path = base_folder / f"{dominos.shop.name}.txt"
+        data = f"{dominos.shop.json(ensure_ascii=False)}:\n\n"
+
+        for order_type in OrderType:
+            dominos.select_type(order_type.name)
+            dominos.start_order()
+            for code in dominos.check_all_codes():
+                data += f"{code.json(ensure_ascii=False)}\n"
+            data += "\n"
+
+        file_path.write_text(data, "utf8")
