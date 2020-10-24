@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
 from urllib.parse import urljoin
@@ -8,7 +9,7 @@ from dateutil.parser import parse
 from .codes import get_codes
 from .locations import OrderType, Shop, get_shop_by_address
 from .networking import Downloader
-from .schemas import Address, AppliedPromotion, WorkingCode
+from .schemas import Address, AppliedPromotion, Information, WorkingCode
 from .utils import BASE_URL
 
 
@@ -91,13 +92,20 @@ def update_codes(addresses: List[Address], base_folder=""):
         dominos = Dominos()
         dominos.select_shop(**address.dict())
         file_path = base_folder / f"{dominos.shop.name}.txt"
-        data = f"{dominos.shop.json(ensure_ascii=False)}:\n\n"
+
+        order_types = dict()
 
         for order_type in OrderType:
             dominos.select_type(order_type.name)
             dominos.start_order()
+            codes = []
             for code in dominos.check_all_codes():
-                data += f"{code.json(ensure_ascii=False)}\n"
-            data += "\n"
+                codes.append(code)
+            order_types[order_type.value] = codes
 
+        info = Information(
+            shop=dominos.shop, updated=datetime.now(), order_types=order_types
+        )
+
+        data = info.json(ensure_ascii=False, indent=4)
         file_path.write_text(data, "utf8")

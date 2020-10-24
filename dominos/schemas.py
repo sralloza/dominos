@@ -1,6 +1,6 @@
-from datetime import date
+from datetime import date, datetime
 from enum import Enum
-from typing import List
+from typing import Dict, List
 
 from pydantic import BaseModel, validator
 
@@ -59,3 +59,15 @@ class AppliedPromotion(BaseModel):
 
 class WorkingCode(AppliedPromotion):
     code: str
+
+
+class ShowableWorkingCode(BaseModel):
+    description: str
+    expires: date
+    code: str
+
+
+class Information(BaseModel):
+    shop: Shop
+    updated: datetime
+    order_types: Dict[str, List[ShowableWorkingCode]]
