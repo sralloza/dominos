@@ -91,7 +91,7 @@ def update_codes(addresses: List[Address], base_folder=""):
     for address in addresses:
         dominos = Dominos()
         dominos.select_shop(**address.dict())
-        file_path = base_folder / f"{dominos.shop.name}.txt"
+        file_path = base_folder / f"{dominos.shop.name_alias}.txt"
 
         order_types = dict()
 

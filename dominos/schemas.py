@@ -31,6 +31,11 @@ class Shop(BaseModel):
     types: List[OrderType]
     coords: Coords
 
+    @property
+    def name_alias(self):
+        street, numbers, _, city = [x.strip() for x in self.name.split(",")]
+        return f"{city}, {street} {numbers}"
+
 
 class Address(BaseModel):
     province: str
