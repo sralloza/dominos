@@ -1,7 +1,9 @@
+from datetime import date
 from enum import Enum
 from typing import List
 
 from pydantic import BaseModel, validator
+
 from .utils import remove_accents
 
 
@@ -52,7 +54,7 @@ class Address(BaseModel):
 class AppliedPromotion(BaseModel):
     order_type: OrderType
     description: str
-    expires: str
+    expires: date
 
 
 class WorkingCode(AppliedPromotion):

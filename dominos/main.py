@@ -2,7 +2,7 @@ from typing import List, Optional
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
-
+from dateutil.parser import parse
 
 from .codes import get_codes
 from .locations import OrderType, Shop, get_shop_by_address
@@ -59,9 +59,9 @@ class Dominos:
 
         for promotion in promotions_container:
             description = promotion["data-name"]
-            expires = (
-                promotion.find("small", class_="small").text.split()[-1].strip(".")
-            )
+            expires_container = promotion.find("small", class_="small")
+            expires = expires_container.text.split()[-1].strip(".")
+            expires = parse(expires).date()
             promotion = AppliedPromotion(
                 order_type=self.order_type, description=description, expires=expires
             )
