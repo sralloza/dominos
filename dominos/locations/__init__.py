@@ -1,7 +1,5 @@
 from dominos.schemas import Address, Coords, OrderType, Shop
-from enum import Enum
 import json
-from collections import namedtuple
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -62,7 +60,9 @@ def build_shop_from_soup(soup: BeautifulSoup):
     schedule = paragraphs[1].text[9:]
     types = [OrderType(x["name"]) for x in soup.find_all("button")]
 
-    coords = Coords(lat=float(soup["data-latitude"]), long=float(soup["data-longitude"]))
+    coords = Coords(
+        lat=float(soup["data-latitude"]), long=float(soup["data-longitude"])
+    )
     return Shop(
         id=shop_id,
         title=title,

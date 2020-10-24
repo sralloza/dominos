@@ -1,14 +1,13 @@
-from collections import namedtuple
 from typing import List, Optional
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from dominos.schemas import AppliedPromotion, WorkingCode
 
 from .codes import get_codes
 from .locations import OrderType, Shop, get_shop_by_address
 from .networking import Downloader
+from .schemas import Address, AppliedPromotion, WorkingCode
 from .utils import BASE_URL
 
 
@@ -20,7 +19,14 @@ class Dominos:
         self.applied_promotions: List[AppliedPromotion] = []
 
     def select_shop(self, province, city, street_name, street_number):
-        self.shop = get_shop_by_address(province, city, street_name, street_number)
+        address = Address(
+            province=province,
+            city=city,
+            street_name=street_name,
+            street_number=street_number,
+        )
+
+        self.shop = get_shop_by_address(address)
 
     def select_type(self, order_type: str):
         self.order_type = OrderType[order_type]
