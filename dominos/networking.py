@@ -21,7 +21,7 @@ settings = _settings()
 del _settings
 
 
-class Downloader(requests.Session, metaclass=MetaSingleton):
+class Downloader(requests.Session):
     """Downloader with retries control.
 
     Args:
