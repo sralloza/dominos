@@ -2,6 +2,7 @@ from enum import Enum
 from typing import List
 
 from pydantic import BaseModel
+from .utils import remove_accents
 
 
 class OrderType(Enum):
@@ -27,6 +28,25 @@ class Shop(BaseModel):
     schedule: str
     types: List[OrderType]
     coords: Coords
+
+
+class Address(BaseModel):
+    province: str
+    city: str
+    street_name: str
+    street_number: int
+
+    @validator("province")
+    def validate_province(cls, v):
+        return v.lower()
+
+    @validator("city")
+    def validate_city(cls, v):
+        return remove_accents(v).upper()
+
+    @validator("street_name")
+    def validate_street_name(cls, v):
+        return remove_accents(v).upper()
 
 
 class AppliedPromotion(BaseModel):

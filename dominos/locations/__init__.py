@@ -1,4 +1,4 @@
-from dominos.schemas import Coords, OrderType, Shop
+from dominos.schemas import Address, Coords, OrderType, Shop
 from enum import Enum
 import json
 from collections import namedtuple
@@ -12,29 +12,19 @@ from dominos.utils import BASE_URL
 json_path = Path(__file__).with_name("provinces-cities-ids.json")
 
 
-def remove_accents(string):
-    string = string.lower()
-    string = string.replace("á", "a")
-    string = string.replace("é", "e")
-    string = string.replace("í", "i")
-    string = string.replace("ó", "o")
-    string = string.replace("ú", "u")
-    return string.upper()
-
-
-def get_shop_by_address(province, city, street_name, street_number):
-    province = province.lower()
-    city = remove_accents(city)
-    street_name = remove_accents(street_name)
+def get_shop_by_address(address: Address):
     data = json.loads(json_path.read_text("utf8"))
 
     for province_name, province_data in data.items():
-        if province_name != province:
+        if province_name != address.province:
             continue
         for city_name, city_id in province_data["cities"].items():
-            if city_name == city:
+            if city_name == address.city:
                 return find_closest_shop(
-                    province_data["id"], city_id, street_name, street_number
+                    province_data["id"],
+                    city_id,
+                    address.street_name,
+                    address.street_number,
                 )
 
     raise RuntimeError()
