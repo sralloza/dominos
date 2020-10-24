@@ -1,0 +1,5 @@
+include versioneer.py
+include dominos/_version.py
+include dominos/locations/provinces-cities-ids.json
+include dominos/locations/province-ids.json
+include dominos/codes/codes.txt

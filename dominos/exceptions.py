@@ -1,0 +1,6 @@
+class DominosError(Exception):
+    ...
+
+
+class DownloaderError(DominosError):
+    ...

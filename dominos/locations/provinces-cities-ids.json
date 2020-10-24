@@ -1,0 +1,558 @@
+{
+    "a coru\u00f1a": {
+        "id": 15,
+        "cities": {
+            "A CORU\u00d1A": "150030",
+            "AMES": "150002",
+            "ARTEIXO": "150005",
+            "FERROL": "150036",
+            "SANTIAGO DE COMPOSTELA": "150078",
+            "TEO": "150082"
+        }
+    },
+    "alava": {
+        "id": 1,
+        "cities": {
+            "VITORIA-GASTEIZ": "10059"
+        }
+    },
+    "albacete": {
+        "id": 2,
+        "cities": {
+            "ALBACETE": "20003"
+        }
+    },
+    "alicante": {
+        "id": 3,
+        "cities": {
+            "ALCOY/ALCOI": "30009",
+            "ALICANTE/ALACANT": "30014",
+            "BENIDORM": "30031",
+            "DENIA": "30063",
+            "ELCHE/ELX": "30065",
+            "ELDA": "30066",
+            "FINESTRAT": "30069",
+            "MUTXAMEL": "30090",
+            "ORIHUELA": "30099",
+            "PETRER": "30104",
+            "SAN VICENTE DEL RASPEIG/SANT VICENT DEL RASPEIG": "30122",
+            "SANT JOAN D'ALACANT": "30119",
+            "TORREVIEJA": "30133",
+            "VILLAJOYOSA/VILA JOIOSA (LA)": "30139"
+        }
+    },
+    "almer\u00eda": {
+        "id": 4,
+        "cities": {
+            "ALMERIA": "40013",
+            "EJIDO (EL)": "40902",
+            "ROQUETAS DE MAR": "40079",
+            "VICAR": "40102"
+        }
+    },
+    "asturias": {
+        "id": 33,
+        "cities": {
+            "AVILES": "330004",
+            "GIJON": "330024",
+            "LANGREO": "330031",
+            "MIERES": "330037",
+            "OVIEDO": "330044",
+            "SIERO": "330066"
+        }
+    },
+    "\u00e1vila": {
+        "id": 5,
+        "cities": {
+            "AVILA": "50019"
+        }
+    },
+    "badajoz": {
+        "id": 6,
+        "cities": {
+            "BADAJOZ": "60015",
+            "DON BENITO": "60044",
+            "MERIDA": "60083"
+        }
+    },
+    "barcelona": {
+        "id": 8,
+        "cities": {
+            "BADALONA": "80015",
+            "BADIA DEL VALLES": "80904",
+            "BARBERA DEL VALLES": "80252",
+            "BARCELONA": "80019",
+            "CANOVELLES": "80041",
+            "CASTELLDEFELS": "80056",
+            "CERDANYOLA DEL VALLES": "80266",
+            "CORNELLA DE LLOBREGAT": "80073",
+            "ESPLUGUES DE LLOBREGAT": "80077",
+            "FRANQUESES DEL VALLES (LES)": "80086",
+            "GAVA": "80089",
+            "GRANOLLERS": "80096",
+            "HOSPITALET DE LLOBREGAT (L')": "80101",
+            "IGUALADA": "80102",
+            "MANRESA": "80113",
+            "MATARO": "80121",
+            "MOLINS DE REI": "80123",
+            "MOLLET DEL VALLES": "80124",
+            "MONTGAT": "80126",
+            "ODENA": "80143",
+            "OLERDOLA": "80145",
+            "POBLA DE CLARAMUNT (LA)": "80165",
+            "PRAT DE LLOBREGAT (EL)": "80169",
+            "RIPOLLET": "80180",
+            "ROCA DEL VALLES (LA)": "80181",
+            "RUBI": "80184",
+            "SABADELL": "80187",
+            "SANT ADRIA DE BESOS": "80194",
+            "SANT BOI DE LLOBREGAT": "80200",
+            "SANT CUGAT DEL VALLES": "80205",
+            "SANT FELIU DE LLOBREGAT": "80211",
+            "SANT JOAN DESPI": "80217",
+            "SANT JUST DESVERN": "80221",
+            "SANT PERE DE RIBES": "80231",
+            "SANT QUIRZE DEL VALLES": "80238",
+            "SANTA COLOMA DE GRAMENET": "80245",
+            "SANTA MARGARIDA DE MONTBUI": "80250",
+            "SITGES": "80270",
+            "TERRASSA": "80279",
+            "VILADECANS": "80301",
+            "VILADECAVALLS": "80300",
+            "VILAFRANCA DEL PENEDES": "80305",
+            "VILANOVA DEL CAMI": "80302",
+            "VILANOVA I LA GELTRU": "80307"
+        }
+    },
+    "burgos": {
+        "id": 9,
+        "cities": {
+            "ARANDA DE DUERO": "90018",
+            "BURGOS": "90059"
+        }
+    },
+    "c\u00e1ceres": {
+        "id": 10,
+        "cities": {
+            "CACERES": "100037",
+            "PLASENCIA": "100148"
+        }
+    },
+    "c\u00e1diz": {
+        "id": 11,
+        "cities": {
+            "ALGECIRAS": "110004",
+            "CADIZ": "110012",
+            "CHICLANA DE LA FRONTERA": "110015",
+            "JEREZ DE LA FRONTERA": "110020",
+            "LINEA DE LA CONCEPCION (LA)": "110022",
+            "PUERTO REAL": "110028",
+            "ROTA": "110030",
+            "SAN FERNANDO": "110031",
+            "SAN ROQUE": "110033"
+        }
+    },
+    "cantabria": {
+        "id": 39,
+        "cities": {
+            "CARTES": "390018",
+            "SANTANDER": "390075",
+            "SANTILLANA DEL MAR": "390076",
+            "TORRELAVEGA": "390087"
+        }
+    },
+    "castell\u00f3n": {
+        "id": 12,
+        "cities": {
+            "CASTELL\u00d3N DE LA PLANA": "120040",
+            "VILLARREAL/VILA-REAL": "120135",
+            "VINAROS": "120138"
+        }
+    },
+    "ceuta": {
+        "id": 51,
+        "cities": {
+            "CEUTA": "510001"
+        }
+    },
+    "ciudad real": {
+        "id": 13,
+        "cities": {
+            "ALCAZAR DE SAN JUAN": "130005",
+            "CIUDAD REAL": "130034",
+            "MIGUELTURRA": "130056",
+            "PUERTOLLANO": "130071",
+            "TOMELLOSO": "130082",
+            "VALDEPE\u00d1AS": "130087"
+        }
+    },
+    "c\u00f3rdoba": {
+        "id": 14,
+        "cities": {
+            "CORDOBA": "140021"
+        }
+    },
+    "cuenca": {
+        "id": 16,
+        "cities": {
+            "CUENCA": "160078"
+        }
+    },
+    "girona": {
+        "id": 17,
+        "cities": {
+            "BLANES": "170023",
+            "GIRONA": "170079",
+            "LLORET DE MAR": "170095",
+            "SALT": "170155"
+        }
+    },
+    "granada": {
+        "id": 18,
+        "cities": {
+            "ARMILLA": "180021",
+            "CHURRIANA DE LA VEGA": "180062",
+            "GRANADA": "180087",
+            "MARACENA": "180127",
+            "MOTRIL": "180140",
+            "OGIJARES": "180145",
+            "PULIANAS": "180165"
+        }
+    },
+    "guadalajara": {
+        "id": 19,
+        "cities": {
+            "ALOVERA": "190024",
+            "AZUQUECA DE HENARES": "190046",
+            "CABANILLAS DEL CAMPO": "190058",
+            "GUADALAJARA": "190130",
+            "MARCHAMALO": "190171",
+            "VILLANUEVA DE LA TORRE": "190319"
+        }
+    },
+    "guip\u00fazcoa": {
+        "id": 20,
+        "cities": {
+            "DONOSTIA-SAN SEBASTIAN": "200069",
+            "HONDARRIBIA": "200036",
+            "IRUN": "200045"
+        }
+    },
+    "huelva": {
+        "id": 21,
+        "cities": {
+            "HUELVA": "210041"
+        }
+    },
+    "huesca": {
+        "id": 22,
+        "cities": {
+            "HUESCA": "220125"
+        }
+    },
+    "islas baleares": {
+        "id": 7,
+        "cities": {
+            "MAHON": "70032",
+            "PALMA DE MALLORCA": "70040"
+        }
+    },
+    "ja\u00e9n": {
+        "id": 23,
+        "cities": {
+            "JAEN": "230050",
+            "LINARES": "230055",
+            "UBEDA": "230092"
+        }
+    },
+    "la rioja": {
+        "id": 26,
+        "cities": {
+            "LOGRO\u00d1O": "260089"
+        }
+    },
+    "las palmas": {
+        "id": 35,
+        "cities": {
+            "PALMAS DE GRAN CANARIA (LAS)": "350016"
+        }
+    },
+    "le\u00f3n": {
+        "id": 24,
+        "cities": {
+            "LEON": "240089",
+            "ONZONILLA": "240105",
+            "PONFERRADA": "240115",
+            "SAN ANDRES DEL RABANEDO": "240142",
+            "VILLAQUILAMBRE": "240222"
+        }
+    },
+    "lleida": {
+        "id": 25,
+        "cities": {
+            "LLEIDA": "250120"
+        }
+    },
+    "lugo": {
+        "id": 27,
+        "cities": {
+            "LUGO": "270028"
+        }
+    },
+    "madrid": {
+        "id": 28,
+        "cities": {
+            "ALCALA DE HENARES": "280005",
+            "ALCOBENDAS": "280006",
+            "ALCORCON": "280007",
+            "ALGETE": "280009",
+            "ALPEDRETE": "280010",
+            "ARANJUEZ": "280013",
+            "ARGANDA DEL REY": "280014",
+            "ARROYOMOLINOS": "280015",
+            "BOADILLA DEL MONTE": "280022",
+            "BRUNETE": "280026",
+            "COBE\u00d1A": "280041",
+            "COLLADO VILLALBA": "280047",
+            "COLMENAR VIEJO": "280045",
+            "COSLADA": "280049",
+            "ESCORIAL (EL)": "280054",
+            "FUENLABRADA": "280058",
+            "FUENTE EL SAZ DE JARAMA": "280059",
+            "GALAPAGAR": "280061",
+            "GETAFE": "280065",
+            "GUADARRAMA": "280068",
+            "LEGANES": "280074",
+            "MADRID": "280079",
+            "MAJADAHONDA": "280080",
+            "MOSTOLES": "280092",
+            "PARLA": "280106",
+            "PINTO": "280113",
+            "POZUELO DE ALARCON": "280115",
+            "RIVAS-VACIAMADRID": "280123",
+            "ROZAS DE MADRID (LAS)": "280127",
+            "SAN FERNANDO DE HENARES": "280130",
+            "SAN LORENZO DE EL ESCORIAL": "280131",
+            "SAN SEBASTIAN DE LOS REYES": "280134",
+            "TORREJON DE ARDOZ": "280148",
+            "TORRELODONES": "280152",
+            "TRES CANTOS": "280903",
+            "VALDEMORO": "280161",
+            "VILLANUEVA DE LA CA\u00d1ADA": "280176",
+            "VILLAVICIOSA DE ODON": "280181"
+        }
+    },
+    "m\u00e1laga": {
+        "id": 29,
+        "cities": {
+            "ESTEPONA": "290051",
+            "FUENGIROLA": "290054",
+            "MALAGA": "290067",
+            "MARBELLA": "290069",
+            "MIJAS": "290070",
+            "TORREMOLINOS": "290901",
+            "VELEZ-MALAGA": "290094"
+        }
+    },
+    "murcia": {
+        "id": 30,
+        "cities": {
+            "ALCANTARILLA": "300005",
+            "CARTAGENA": "300016",
+            "LORCA": "300024",
+            "MOLINA DE SEGURA": "300027",
+            "MURCIA": "300030"
+        }
+    },
+    "navarra": {
+        "id": 31,
+        "cities": {
+            "ANSOAIN": "310016",
+            "ARANGUREN": "310023",
+            "BARA\u00d1AIN": "310901",
+            "BERRIOPLANO": "310902",
+            "BERRIOZAR": "310903",
+            "BURLADA/BURLATA": "310060",
+            "CIZUR": "310076",
+            "EGUES": "310086",
+            "HUARTE/UHARTE": "310122",
+            "PAMPLONA/IRU\u00d1A": "310201",
+            "TUDELA": "310232",
+            "VILLAVA/ATARRABIA": "310258",
+            "ZIZUR MAYOR/ZIZUR NAGUSIA": "310907"
+        }
+    },
+    "ourense": {
+        "id": 32,
+        "cities": {
+            "BARBADAS": "320008",
+            "OURENSE": "320054",
+            "SAN CIBRAO DAS VI\u00d1AS": "320075"
+        }
+    },
+    "palencia": {
+        "id": 34,
+        "cities": {
+            "PALENCIA": "340120",
+            "VILLALOBON": "340217"
+        }
+    },
+    "pontevedra": {
+        "id": 36,
+        "cities": {
+            "PONTEVEDRA": "360038",
+            "VIGO": "360057",
+            "VILAGARCIA DE AROUSA": "360060"
+        }
+    },
+    "salamanca": {
+        "id": 37,
+        "cities": {
+            "ALDEATEJADA": "370023",
+            "CARBAJOSA DE LA SAGRADA": "370085",
+            "SALAMANCA": "370274",
+            "SANTA MARTA DE TORMES": "370294"
+        }
+    },
+    "santa cruz de tenerife": {
+        "id": 38,
+        "cities": {
+            "OROTAVA (LA)": "380026",
+            "PUERTO DE LA CRUZ": "380028",
+            "SAN CRISTOBAL DE LA LAGUNA": "380023",
+            "SANTA CRUZ DE TENERIFE": "380038"
+        }
+    },
+    "segovia": {
+        "id": 40,
+        "cities": {
+            "LASTRILLA (LA)": "400112",
+            "SEGOVIA": "400194"
+        }
+    },
+    "sevilla": {
+        "id": 41,
+        "cities": {
+            "ALCALA DE GUADAIRA": "410004",
+            "BORMUJOS": "410017",
+            "CAMAS": "410021",
+            "CASTILLEJA DE LA CUESTA": "410029",
+            "DOS HERMANAS": "410038",
+            "ECIJA": "410039",
+            "GELVES": "410044",
+            "MAIRENA DEL ALJARAFE": "410059",
+            "PALACIOS Y VILLAFRANCA (LOS)": "410069",
+            "RINCONADA (LA)": "410081",
+            "SAN JUAN DE AZNALFARACHE": "410086",
+            "SEVILLA": "410091",
+            "TOMARES": "410093",
+            "UTRERA": "410095"
+        }
+    },
+    "soria": {
+        "id": 42,
+        "cities": {
+            "GOLMAYO": "420095",
+            "SORIA": "420173"
+        }
+    },
+    "tarragona": {
+        "id": 43,
+        "cities": {
+            "CASTELLVELL DEL CAMP": "430042",
+            "REUS": "430123",
+            "SALOU": "430905",
+            "TARRAGONA": "430148",
+            "VILA-SECA": "430171"
+        }
+    },
+    "teruel": {
+        "id": 44,
+        "cities": {
+            "TERUEL": "440216"
+        }
+    },
+    "toledo": {
+        "id": 45,
+        "cities": {
+            "ILLESCAS": "450081",
+            "NUMANCIA DE LA SAGRA": "450119",
+            "TALAVERA DE LA REINA": "450165",
+            "TOLEDO": "450168",
+            "YELES": "450201",
+            "YUNCOS": "450205"
+        }
+    },
+    "valencia": {
+        "id": 46,
+        "cities": {
+            "ALAQUAS": "460005",
+            "ALBAL": "460007",
+            "ALBORAYA": "460013",
+            "ALDAIA": "460021",
+            "ALFAFAR": "460022",
+            "ALZIRA": "460017",
+            "BENETUSSER": "460054",
+            "BENIRREDRA": "460066",
+            "BETERA": "460070",
+            "BURJASSOT": "460078",
+            "CANET D'EN BERENGUER": "460082",
+            "CARCAIXENT": "460083",
+            "CATARROJA": "460094",
+            "ELIANA (L')": "460116",
+            "GANDIA": "460131",
+            "LUGAR NUEVO DE LA CORONA": "460152",
+            "MANISES": "460159",
+            "MASSANASSA": "460165",
+            "MISLATA": "460169",
+            "PAIPORTA": "460186",
+            "PATERNA": "460190",
+            "POBLA DE VALLBONA (LA)": "460202",
+            "QUART DE POBLET": "460102",
+            "RIBA-ROJA DE TURIA": "460214",
+            "SAGUNTO": "460220",
+            "SAN ANTONIO DE BENAGEBER": "460903",
+            "SEDAVI": "460223",
+            "TAVERNES BLANQUES": "460237",
+            "TORRENT": "460244",
+            "VALENCIA": "460250",
+            "XIRIVELLA": "460110"
+        }
+    },
+    "valladolid": {
+        "id": 47,
+        "cities": {
+            "ARROYO DE LA ENCOMIENDA": "470010",
+            "VALLADOLID": "470186"
+        }
+    },
+    "vizcaya": {
+        "id": 48,
+        "cities": {
+            "ARRIGORRIAGA": "480011",
+            "BARAKALDO": "480013",
+            "BASAURI": "480015",
+            "BILBAO": "480020",
+            "ERANDIO": "480902",
+            "ETXEBARRI, ANTEIGLESIA DE SAN ESTEBAN-ETXEBARRI DONEZTEBEKO": "480029",
+            "GALDAKAO": "480036",
+            "GETXO": "480044",
+            "LEIOA": "480054",
+            "PORTUGALETE": "480078",
+            "SANTURTZI": "480082",
+            "SESTAO": "480084"
+        }
+    },
+    "zamora": {
+        "id": 49,
+        "cities": {
+            "ZAMORA": "490275"
+        }
+    },
+    "zaragoza": {
+        "id": 50,
+        "cities": {
+            "ZARAGOZA": "500297"
+        }
+    }
+}
