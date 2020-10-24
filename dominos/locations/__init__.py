@@ -54,7 +54,7 @@ def build_shop_from_soup(soup: BeautifulSoup):
     container = soup.find(class_="fl w50")
 
     shop_id = int(soup["data-idtienda"])
-    title = container.h5.text[7:]
+    name = container.h5.text[7:]
     paragraphs = container.find_all("p")
     phone = int(paragraphs[0].text[10:])
     schedule = paragraphs[1].text[9:]
@@ -65,7 +65,7 @@ def build_shop_from_soup(soup: BeautifulSoup):
     )
     return Shop(
         id=shop_id,
-        title=title,
+        name=name,
         phone=phone,
         schedule=schedule,
         types=types,

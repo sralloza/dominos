@@ -25,7 +25,7 @@ class Coords(BaseModel):
 
 class Shop(BaseModel):
     id: int
-    title: str
+    name: str
     phone: int
     schedule: str
     types: List[OrderType]
