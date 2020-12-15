@@ -1,3 +1,5 @@
+import unidecode
+
 BASE_URL = "https://www.dominospizza.es/"
 
 
@@ -18,14 +20,7 @@ class MetaSingleton(type):
 
 
 def remove_accents(string: str) -> str:
-    string = string.replace("á", "a")
-    string = string.replace("é", "e")
-    string = string.replace("í", "i")
-    string = string.replace("ó", "o")
-    string = string.replace("ú", "u")
-    string = string.replace("Á", "A")
-    string = string.replace("É", "E")
-    string = string.replace("Í", "I")
-    string = string.replace("Ó", "O")
-    string = string.replace("Ú", "U")
-    return string
+    result = unidecode.unidecode(string)
+    if isinstance(result, str):
+        return result
+    return result.decode("utf8")

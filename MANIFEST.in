@@ -3,3 +3,7 @@ include dominos/_version.py
 include dominos/locations/provinces-cities-ids.json
 include dominos/locations/province-ids.json
 include dominos/codes/codes.txt
+
+# added by check-manifest
+include *.txt
+recursive-include dominos *.py

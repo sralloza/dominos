@@ -34,7 +34,7 @@ class Shop(BaseModel):
     @property
     def name_alias(self):
         street, numbers, _, city = [x.strip() for x in self.name.split(",")]
-        return f"{city}, {street} {numbers}"
+        return remove_accents(f"{city}, {street} {numbers}")
 
 
 class Address(BaseModel):
