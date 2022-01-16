@@ -20,6 +20,25 @@ class Dominos:
         self.shop: Optional[Shop] = None
         self.order_type: Optional[OrderType] = None
         self.applied_promotions: List[AppliedPromotion] = []
+        self._token = None
+
+    @property
+    def token(self) -> str:
+        if not self._token:
+            self._token = self.get_token()
+        return self._token
+
+    def get_token(self) -> str:
+        url = urljoin(BASE_URL, "promociones")
+        res = self.downloader.get(url)
+        soup = BeautifulSoup(res.text, "html.parser")
+
+        token_container = soup.find("form", id="__AjaxAntiForgeryForm")
+        if token_container is None:
+            raise ValueError("Can't get AjaxAntiForgeryForm token")
+
+        token = token_container.input["value"]
+        return token
 
     def select_shop(self, province, city, street_name, street_number):
         address = Address(
@@ -47,7 +66,11 @@ class Dominos:
 
     def check_code(self, code):
         url = urljoin(BASE_URL, "Promocion/AplicarCodPromo")
-        payload = {"CodPromo": code, "url": False}
+        payload = {
+            "CodPromo": code,
+            "url": False,
+            "__RequestVerificationToken": self.token,
+        }
 
         response = self.downloader.post(url, data=payload)
         response.raise_for_status()
