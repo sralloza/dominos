@@ -18,5 +18,5 @@ def fix_codes() -> List[str]:
     base_codes = [x.lower().strip() for x in codes if x]
     base_codes = list(set(base_codes))
     base_codes.sort()
-    CODES_PATH.write_text("\n".join(base_codes), "utf-8")
+    CODES_PATH.write_text("\n".join(base_codes) + "\n", "utf-8")
     return base_codes

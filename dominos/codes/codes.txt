@@ -32,6 +32,7 @@ fam11
 fami17
 feb3x1
 febrdp
+feedme50
 geci10
 geci16
 geci9
@@ -65,6 +66,9 @@ patro550
 pifive
 pizzeando
 playdominos
+savings80
+studentfy18
+studentfy6
 theo10
 theo12
 theo14
