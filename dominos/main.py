@@ -54,6 +54,9 @@ class Dominos:
         self.order_type = OrderType[order_type]
 
     def start_order(self):
+        if not self.shop or not self.order_type:
+            raise ValueError("Shop or order type not configured")
+
         payload = {
             "idTienda": self.shop.id,
             "tipoPedido": self.order_type.value.title(),
@@ -81,11 +84,14 @@ class Dominos:
         url = urljoin(BASE_URL, "promociones")
         response = self.downloader.get(url)
         soup = BeautifulSoup(response.text, "html.parser")
-        promotions_container = soup.find_all("li", class_="code--promotion")
+        promotions_container = list(soup.find_all("div", class_="promo-content"))
+
+        if not promotions_container:
+            raise ValueError("Can't get promotions container")
 
         for promotion in promotions_container:
-            description = promotion["data-name"]
-            expires_container = promotion.find("small", class_="small")
+            description = promotion.find("h3").text.strip()
+            expires_container = promotion.find("div", class_="promo-description")
             expires_text = unidecode(expires_container.text).strip(" .")
             expires = expires_text.split()[-1].strip(". ")
             expires = parse(expires).date()
