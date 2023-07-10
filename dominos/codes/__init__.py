@@ -5,12 +5,7 @@ CODES_PATH = Path(__file__).with_name("codes.txt")
 
 
 def get_codes() -> List[str]:
-    codes = fix_codes()
-
-    codes += [x.lower() for x in codes]
-    codes += [x.upper() for x in codes]
-    codes = list(set(codes))
-    return codes
+    return [x.upper() for x in fix_codes()]
 
 
 def fix_codes() -> List[str]:
